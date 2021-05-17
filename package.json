@@ -7,10 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.ts,.tsx src -c .eslintrc",
     "clean": "rm -rf dist",
-    "dev:build": "webpack --config webpack.dev.js",
-    "dev:watch": "webpack --config webpack.dev.js --watch",
-    "dev:start": "webpack-dev-server --open --hot --config webpack.dev.js",
-    "prod:build": "webpack --config webpack.prod.js"
+    "watch": "webpack --config webpack.dev.js --watch",
+    "start": "webpack server --open --hot --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "Calum Leask",
   "devDependencies": {
