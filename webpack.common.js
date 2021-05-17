@@ -15,14 +15,9 @@ module.exports = ({
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|ts)x?$/,
                 include: [SRC_DIR],
                 loader: "babel-loader"
-            },
-            {
-                test: /\.tsx?$/,
-                include: [SRC_DIR],
-                loader: "babel-loader",
             }
         ]
     },
