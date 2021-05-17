@@ -7,7 +7,7 @@ const SRC_DIR = path.resolve(__dirname, "src");
 const BUILD_DIR = path.resolve(__dirname, "dist");
 
 module.exports = ({
-    entry: SRC_DIR + "/web/index.js",
+    entry: SRC_DIR + "/app/index.js",
     output: {
         path: BUILD_DIR,
         filename: "bundle.js"
@@ -15,14 +15,9 @@ module.exports = ({
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|ts)x?$/,
                 include: [SRC_DIR],
                 loader: "babel-loader"
-            },
-            {
-                test: /\.tsx?$/,
-                include: [SRC_DIR],
-                loader: "babel-loader",
             }
         ]
     },
