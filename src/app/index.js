@@ -1,11 +1,11 @@
 import React from "react";
 import { render } from "react-dom";
 
-import App from "~/app/containers/App";
+import Root from "~/app/containers/Root";
 
-import "./style.scss";
+import "~/app/style/main.scss";
 
 render(
-    <App/>,
+    <Root/>,
     document.getElementById("app")
 );
