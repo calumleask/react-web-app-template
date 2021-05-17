@@ -18,6 +18,14 @@ module.exports = ({
                 test: /\.(js|ts)x?$/,
                 include: [SRC_DIR],
                 loader: "babel-loader"
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
             }
         ]
     },

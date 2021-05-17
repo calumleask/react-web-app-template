@@ -1,8 +1,12 @@
 import React from "react";
 
+import "./style.scss";
+
 const App: React.FC = () => {
     return (
-        <h1>Hello React</h1>
+        <div className={"app-container"}>
+            <h1>Hello React</h1>
+        </div>
     );
 };
 
