@@ -1,5 +1,5 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const AboutRoute: React.FC = () => {
   const history = useHistory();
@@ -7,7 +7,13 @@ const AboutRoute: React.FC = () => {
   return (
     <>
       <h1>About</h1>
-      <button onClick={(): void => { history.push("/"); }}>{"Home"}</button>
+      <button
+        onClick={(): void => {
+          history.push('/');
+        }}
+      >
+        {'Home'}
+      </button>
     </>
   );
 };
