@@ -25,7 +25,7 @@ const actionTypes = createActionTypes(reducerName, ['INCREMENT']);
  */
 
 const reducer = createReducer<CounterReducerState>(initialState, {
-  [actionTypes.INCREMENT]: state => ({ ...state, count: ++state.count }),
+  [actionTypes.INCREMENT]: state => ({ ...state, count: state.count + 1 }),
 });
 
 reducerRegistry.register(reducerName, reducer);
@@ -34,7 +34,7 @@ reducerRegistry.register(reducerName, reducer);
  *  Action Builders
  */
 
-export const buildActionIncrementCountRoute = (): ReduxAction => ({
+export const buildActionIncrementCountRoute = (): AppAction => ({
   type: actionTypes.INCREMENT,
 });
 

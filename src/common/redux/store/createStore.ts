@@ -1,6 +1,6 @@
-import { combineReducers, createStore, applyMiddleware } from 'redux';
+import { combineReducers } from 'redux';
 import { Middleware, Reducer, ReducersMapObject, Store } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+import { configureStore } from '@reduxjs/toolkit';
 
 import { registerStore } from './storeRegister';
 import reducerRegistry from '../reducers/ReducerRegistry';
@@ -19,14 +19,13 @@ const combine = (reducers: ReducersMapObject): Reducer => {
 
 export const create = (middlewares?: Middleware[] | Middleware): Store => {
   const reducer = combine(reducerRegistry.getReducers());
-  const enhancer = middlewares
-    ? composeWithDevTools(
-        applyMiddleware(
-          ...(!Array.isArray(middlewares) ? [middlewares] : middlewares),
-        ),
-      )
-    : composeWithDevTools();
-  const store = createStore(reducer, enhancer);
+  const store = configureStore({
+    reducer,
+    middleware: getDefaultMiddleware =>
+      getDefaultMiddleware().concat(
+        Array.isArray(middlewares) ? middlewares : [middlewares],
+      ),
+  });
   registerStore(store);
 
   reducerRegistry.setChangeListener((reducers: ReducersMapObject) => {
