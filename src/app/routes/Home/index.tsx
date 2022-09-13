@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 type Props = StateProps & DispatchProps;
 
 const HomeRoute: React.FC<Props> = ({ count, incrementCount }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const onIncrementClick = (): void => {
     incrementCount();
@@ -16,7 +16,7 @@ const HomeRoute: React.FC<Props> = ({ count, incrementCount }) => {
       <h1>Home</h1>
       <button
         onClick={(): void => {
-          history.push('/about');
+          navigate('/about');
         }}
       >
         {'About'}
