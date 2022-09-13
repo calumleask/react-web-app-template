@@ -1,7 +1,4 @@
-import createActionTypes from "./createActionTypes";
-import createReducer from "./createReducer";
+import createActionTypes from './createActionTypes';
+import createReducer from './createReducer';
 
-export {
-    createActionTypes,
-    createReducer
-};
+export { createActionTypes, createReducer };

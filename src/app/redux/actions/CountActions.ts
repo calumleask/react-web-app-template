@@ -1,7 +1,7 @@
-import { Dispatch } from "redux";
+import { AppThunk } from '~/app/redux/types';
 
-import { buildActionIncrementCountRoute } from "../reducers/CountReducer";
+import { buildActionIncrementCountRoute } from '../reducers/CountReducer';
 
-export const incrementCountAction = (dispatch: Dispatch): void => {
+export const incrementCountAction = (): AppThunk => async dispatch => {
   dispatch(buildActionIncrementCountRoute());
 };
