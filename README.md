@@ -1,5 +1,7 @@
 # React Web App Template
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 ## Prerequisites
 - [Node.js](https://nodejs.org/en/)
 - npm (installed with Node.js)
