@@ -11,7 +11,7 @@
     "watch": "webpack --config webpack.dev.js --watch",
     "start": "webpack server --open --hot --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "format": "prettier --write src"
+    "format": "prettier --write ."
   },
   "author": "Calum Leask",
   "devDependencies": {
