@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AboutRoute: React.FC = () => {
   const navigate = useNavigate();
@@ -9,10 +9,10 @@ const AboutRoute: React.FC = () => {
       <h1>About</h1>
       <button
         onClick={(): void => {
-          navigate("/");
+          navigate('/');
         }}
       >
-        {"Home"}
+        {'Home'}
       </button>
     </>
   );

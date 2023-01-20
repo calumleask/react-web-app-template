@@ -1,6 +1,7 @@
 # React Web App Template
 
 ## Prerequisites
+
 - [Node.js](https://nodejs.org/en/)
 - npm (installed with Node.js)
 
